@@ -1,0 +1,9 @@
+[
+  { "id": "1", "name": "Angular", "category": "Front-End" },
+  { "id": "2", "name": "React", "category": "Front-End" },
+  { "id": "3", "name": "Java", "category": "Back-End" },
+  { "id": "4", "name": "Spring Boot", "category": "Back-End" },
+  { "id": "5", "name": "Microsservices", "category": "DevOps" },
+  { "id": "6", "name": "Redes de computadores", "category": "Redes" },
+  { "id": "7", "name": "Teste", "category": "Teste" }
+]
