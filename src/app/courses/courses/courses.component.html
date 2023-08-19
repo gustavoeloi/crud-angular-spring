@@ -8,12 +8,6 @@
         The actual rendered columns are set as a property on the row definition" -->
 
 
-        <!-- ID Column -->
-        <ng-container matColumnDef="_id">
-          <th mat-header-cell *matHeaderCellDef> ID </th>
-          <td mat-cell *matCellDef="let course"> {{ course._id }} </td>
-        </ng-container>
-
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef> Nome </th>
@@ -26,6 +20,26 @@
           <td mat-cell *matCellDef="let course"> {{course.category}}
             <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{ course.category | category }}</mat-icon>
           </td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>
+            <button mat-icon-button color="accent" aria-label="Adicionar um curso" (click)="onAdd()">
+              <mat-icon>add</mat-icon>
+            </button>
+
+            <mat-cell *matCellDef="let course">
+              <button mat-icon-button color="primary" aria-label="Editar um curso">
+                <mat-icon>edit</mat-icon>
+              </button>
+
+              <button mat-icon-button color="warning" aria-label="Remover um curso">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-cell>
+
+          </mat-header-cell>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
